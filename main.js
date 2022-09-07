@@ -1,3 +1,4 @@
+/*
 const juan = {
     name: "juannito",
     age: 18,
@@ -10,12 +11,34 @@ const juan = {
 };
 
 
-//console.log(Object.keys(juan));
-//console.log(Object.getOwnPropertyNames(juan));
-//console.log(Object.entries(juan)); 
+console.log(Object.keys(juan));
+console.log(Object.getOwnPropertyNames(juan));
+console.log(Object.entries(juan)); 
 
 
-//Object.seal(juan);
+Object.seal(juan);
 Object.freeze(juan);
 
-console.log(Object.getOwnPropertyDescriptors(juan));
+console.log(Object.getOwnPropertyDescriptors(juan)); */
+
+
+
+
+///////////////////////   JSON.parse y JSON.stringify   ///////////////////////////////////
+
+const obj1 = {
+    a: 'a',
+    b: 'b',
+    c: {
+        d: 'd',
+        e: 'e',
+    },
+};
+
+const obj2 = {};
+
+
+
+
+
+
