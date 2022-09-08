@@ -35,7 +35,8 @@ const obj1 = {
     },
 };
 
-const obj2 = {};
+const stringifyComplexObj = JSON.stringify(obj1);
+const obj2 = JSON.parse(stringifyComplexObj);
 
 
 
