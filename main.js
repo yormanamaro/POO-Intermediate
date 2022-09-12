@@ -1,4 +1,4 @@
-/*
+
 const juan = {
     name: "juannito",
     age: 18,
@@ -19,7 +19,7 @@ console.log(Object.entries(juan));
 Object.seal(juan);
 Object.freeze(juan);
 
-console.log(Object.getOwnPropertyDescriptors(juan)); */
+console.log(Object.getOwnPropertyDescriptors(juan));
 
 
 
@@ -33,6 +33,9 @@ const obj1 = {
         d: 'd',
         e: 'e',
     },
+    editA() {
+        this.a = 'AAAAAAAA'
+    }
 };
 
 const stringifyComplexObj = JSON.stringify(obj1);
