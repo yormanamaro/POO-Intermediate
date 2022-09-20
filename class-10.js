@@ -60,3 +60,36 @@ Object.defineProperty(yorman, "name", {  // con esta propiedad nos permite cambi
 
 Object.seal(yorman); // con esta propiedad protegemos todos los elementos de nuestro objeto.
 Object.isSealed(yorman); // con este validamos en consola con nustro objeto este protegido de modificaciones
+
+
+//////////////////////////////////////  FACTORY PATTERN Y RORO //////////////////////////////
+
+function requiredParam(param) {  // para decirle al usuario que ese parametro es obligatorio
+    throw new Error(param + " es obligatorio");  // va a lanzar unj aviso
+  }
+  
+  function createStudent({
+    name = requiredParam("name"),  // se usa la funcion para indicar que es obligatorio
+    email = requiredParam("email"),  // se usa la funcion para indicar que es obligatorio
+    age,
+    twitter,
+    instagram,
+    facebook,
+    approvedCourses = [],
+    learningPaths = [],
+  } = {}) {
+    return {
+      name,
+      email,
+      age,
+      approvedCourses,
+      learningPaths,
+      socialMedia: {
+        twitter,
+        instagram,
+        facebook,
+      },
+    };
+  }
+  
+  const juan = createStudent({ email: "juanito@frijoles.co", name: "Juanito" });
